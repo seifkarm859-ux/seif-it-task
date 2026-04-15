@@ -393,3 +393,47 @@ footer {
         font-size: 2rem;
     }
 }
+@media (max-width: 768px) {
+
+    /* تجعل اللوجو والقائمة فوق بعض بدلاً من جنب بعض */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* تضمن ظهور القائمة وجعلها قابلة للتمرير يميناً ويساراً إذا كانت طويلة */
+    nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100%;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    nav ul li {
+        margin: 0 5px;
+    }
+
+    /* تصغير حجم نصوص الترحيب لتناسب شاشة الموبايل */
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    /* إلغاء الإزاحة العلوية السالبة حتى لا يختفي الكلام تحت الهيدر */
+    main {
+        top: 0;
+    }
+}
+
+/* تعديل الميديا كويري للموبايل */
+@media (max-width: 768px) {
+    .hero {
+        text-align: right; /* التأكد من محاذاة النص لليمين */
+    }
+}
