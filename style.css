@@ -14,17 +14,21 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
 }
+
 header {
     background: rgba(255, 255, 255, 0.95);
-    -webkit-backdrop-filter: blur(10px); /* ضروري لأجهزة الآيفون */
+    -webkit-backdrop-filter: blur(10px);
+    /* ضروري لأجهزة الآيفون */
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(3, 60, 248, 0.984);
-    
-    position: -webkit-sticky; /* ضروري لمتصفحات سفاري القديمة */
+
+    position: -webkit-sticky;
+    /* ضروري لمتصفحات سفاري القديمة */
     position: sticky;
     top: 0;
     z-index: 100;
-    width: 100%; /* لضمان أخذ العرض بالكامل وعدم الانكماش */
+    width: 100%;
+    /* لضمان أخذ العرض بالكامل وعدم الانكماش */
 }
 
 nav {
@@ -76,7 +80,8 @@ nav a.active {
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        padding: 1rem; /* تقليل الحواف الجانبية في الموبايل */
+        padding: 1rem;
+        /* تقليل الحواف الجانبية في الموبايل */
     }
 
     nav ul {
@@ -87,12 +92,14 @@ nav a.active {
         position: static;
         padding: 0;
         box-shadow: none;
-        
-        /* التعديل هنا مهم جداً */
+
         width: 100%;
-        overflow-x: auto; /* يسمح بالتمرير الجانبي إذا كانت الروابط كثيرة */
-        -webkit-overflow-scrolling: touch; /* تمرير ناعم في الآيفون */
-        white-space: nowrap; /* يمنع نزول النص لسطر جديد */
+        overflow-x: auto;
+        /* يسمح بالتمرير الجانبي إذا كانت الروابط كثيرة */
+        -webkit-overflow-scrolling: touch;
+        /* تمرير ناعم في الآيفون */
+        white-space: nowrap;
+        /* يمنع نزول النص لسطر جديد */
     }
 }
 
@@ -236,7 +243,7 @@ h1 {
 
 .card button {
     background: transparent;
-        color: #e1e3ec;
+        color: #171320;
         padding: 1rem 2rem;
         border: none;
         border-radius: 50px;
