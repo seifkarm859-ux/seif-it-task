@@ -77,30 +77,37 @@ nav a.active {
         /* اللوجو فوق واللينكات تحت */
         gap: 10px;
     }
+nav ul {
+    display: flex;
+    /* يخليها صف أفقي */
+    list-style: none;
+    gap: 1.5rem;
+    justify-content: center;
+    /* توسيط الروابط */
+    flex-wrap: nowrap;
+    /* يمنع النزول لسطر جديد */
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        /* اللوجو فوق */
+        align-items: center;
+    }
 
     nav ul {
         display: flex;
         flex-direction: row;
-        /* تفضل أفقي */
+        /* تفضل أفقية */
         justify-content: center;
-        /* تتوسّط في النص */
-        background: rgba(255, 255, 255, 0.95);
-        padding: 10px;
-        border-radius: 10px;
+        background: transparent;
+        /* بدون خلفية بيضا */
+        position: static;
+        /* تمنعها من الطلوع كمنيو منفصلة */
+        padding: 0;
+        box-shadow: none;
     }
 }
-
-    nav ul {
-        
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background: white;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
 
     nav ul.show {
         display: flex;
