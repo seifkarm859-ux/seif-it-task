@@ -14,7 +14,6 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
 }
-
 header {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -40,13 +39,15 @@ nav {
 }
 
 nav ul {
-    display: flex;
-    /* دايمًا أفقي */
+    display: flex;              /* دايمًا أفقي */
     list-style: none;
-    gap: 2rem;
-    justify-content: center;
-    /* توسيط الروابط */
+    gap: 1.5rem;
+    justify-content: center;    /* توسيط الروابط */
     flex-wrap: nowrap;
+}
+
+nav ul li {
+    display: inline-block;
 }
 
 nav a {
@@ -65,49 +66,25 @@ nav a.active {
     transform: translateY(-2px);
 }
 
-/* زر المنيو */
-.menu-btn {
-    display: none;
-}
-
 /* موبايل */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
-        /* اللوجو فوق واللينكات تحت */
-        gap: 10px;
-    }
-nav ul {
-    display: flex;
-    /* يخليها صف أفقي */
-    list-style: none;
-    gap: 1.5rem;
-    justify-content: center;
-    /* توسيط الروابط */
-    flex-wrap: nowrap;
-    /* يمنع النزول لسطر جديد */
-}
-
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        /* اللوجو فوق */
+        flex-direction: column;   /* اللوجو فوق */
         align-items: center;
+        gap: 10px;
     }
 
     nav ul {
         display: flex;
-        flex-direction: row;
-        /* تفضل أفقية */
-        justify-content: center;
-        background: transparent;
-        /* بدون خلفية بيضا */
-        position: static;
-        /* تمنعها من الطلوع كمنيو منفصلة */
+        flex-direction: row;      /* تفضل أفقية */
+        justify-content: center;  /* تتوسّط في النص */
+        background: transparent;  /* بدون خلفية بيضا */
+        position: static;         /* تمنعها من الطلوع كمنيو منفصلة */
         padding: 0;
         box-shadow: none;
     }
 }
+
 
     nav ul.show {
         display: flex;
